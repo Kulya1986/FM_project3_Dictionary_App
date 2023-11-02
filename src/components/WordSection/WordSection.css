@@ -1,0 +1,61 @@
+#word-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.audio > button{
+    border: none;
+    width: 75px;
+    height: 75px;
+    background-color: unset;
+    padding: 0;
+}
+
+.audio > button > svg > circle{
+    opacity: .25;
+}
+.audio > button:hover{
+    cursor: pointer;
+}
+.audio > button:hover > svg > circle{
+    opacity: 1;
+}
+.audio > button:hover > svg > path{
+    fill: white;
+}
+.phonetics > p:first-child{
+    font-size: var(--app-heading-lg);
+    font-weight: 700;
+    line-height: var( --app-heading-lg-line);
+    margin: 0;
+}
+.phonetics > p:last-child{
+    color: var(--app-purple);
+    font-size: var( --app-heading-md);
+    line-height: var( --app-heading-md-line);
+    margin: .5rem 0rem 0rem;
+    text-align: left;
+}
+
+@media all and (max-width: 460px){
+    .phonetics > p:first-child{
+        font-size: 2rem;
+        line-height: normal;
+    }
+    .audio > button{
+        width: 48px;
+        height: 48px;
+    }
+    .audio > button > svg {
+        width: 48px;
+        height: 48px;
+    }
+    .phonetics > p:last-child{
+        font-size: var( --app-p-md);
+        line-height: var( --app-p-md-line);
+        margin: .5rem 0rem 0rem;
+    }
+}

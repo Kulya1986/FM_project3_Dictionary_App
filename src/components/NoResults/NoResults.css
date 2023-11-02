@@ -1,0 +1,26 @@
+#error-wrapper{
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+    margin-top: 5.25rem;
+}
+#emoji{
+    font-size: var(--app-heading-lg);
+    line-height: var(--app-heading-lg);
+    margin: 0;
+    padding-bottom: 2.75rem;
+
+}
+#explanation_title{
+    font-size: var(--app-heading-sm);
+    font-weight: 700;
+    margin: 1.5rem 0rem;
+}
+#explanation_text{
+    font-size: var(--app-p-md);
+    line-height: var(--app-p-md-line);
+    color: var(--app-grey);
+    font-weight: 400;
+    margin: 0;
+    padding: 0rem 1rem;
+}

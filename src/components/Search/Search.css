@@ -1,0 +1,95 @@
+#search-bar{
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 4rem;
+    margin: 3rem 0rem;
+    align-items: center;
+}
+#search-bar button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.black#search-word{
+    color: var(--app-white);
+    background-color: var(--app-black-grey);
+}
+.white#search-word{
+    color: var(--app-very-dark-grey);
+    background-color: var(--app-very-light-grey);
+}
+#search-word{
+    font-size: var(--app-heading-sm);
+    line-height: var(--app-heading-sm-line);
+    font-weight: 700;
+    font-family: inherit;
+    font-style: normal;
+    border-radius: 16px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 0rem 1.5rem;
+}
+
+#search-word:hover{
+    outline: 1px solid var(--app-purple);
+    cursor: pointer;
+}
+#search-word:focus{
+    outline: 1px solid var(--app-purple);
+    caret-color: var(--app-purple);
+}
+
+#search-word:focus:hover{
+    border: none;
+}
+
+#search-word:invalid{
+    outline: 1px solid var(--app-red);
+}
+
+#search-word:invalid + p::before{
+    color: var(--app-red);
+    content: 'Whoops, can’t be empty…';
+    width: 100%;
+    font-size: var(--app-heading-sm);
+    position: absolute;
+    top: 4.5rem;
+    left: -16rem;
+}
+.black#mag-button{
+    background-color: var(--app-black-grey);
+}
+#mag-button{
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    height: 1rem;
+    width: 1rem;
+    background-image: url('../../../public/images/icon-search.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+#mag-button:hover{
+    cursor: pointer;
+}
+
+@media all and (max-width: 460px){
+    #search-bar{
+      margin: 1.5rem 0rem;
+      height: 3rem;
+    }
+    #search-word{
+      font-size: 16px;
+      line-height: normal;
+    }
+    #mag-button{
+      right: 1rem;
+      top: 1rem; 
+    }
+  }

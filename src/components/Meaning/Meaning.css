@@ -1,0 +1,167 @@
+#meaning-wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.meaning{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.part-of-speech{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.part-of-speech > span{
+    font-size: var(--app-heading-md);
+    line-height: var(--app-heading-md-line);
+}
+
+.part-of-speech > hr{
+    width: 100%;
+    height: 1px;
+    background-color: var(--app-light-grey);
+    border: none;
+    margin-left: 2rem;
+}
+.part-of-speech > hr.black{
+    background-color: var(--app-dark-grey); 
+}
+.meaning-desc{
+    padding: 2.5rem 0rem;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.meaning-heading, .synonyms-heading, .antonyms-heading{
+    font-size: var(--app-heading-sm);
+    line-height: var(--app-heading-sm-line);
+    color: var(--app-grey);
+    align-self: flex-start;
+}
+.meaning-desc > ul{
+    text-align: left;
+    list-style: none;
+    margin: 0;
+    padding: 1.5rem 0rem 0rem 3rem;
+}
+.meaning-desc > ul > li{
+    font-size: var(--app-p-md);
+    line-height: var(--app-p-md-line);
+    margin-bottom: .8rem;
+}
+.meaning-desc > ul > li > p{
+    margin: .4rem 0rem;
+}  
+.meaning-desc > ul > li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--app-purple); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1.5em; /* Also needed for space (tweak if needed) */
+    margin-left: -1.5em; /* Also needed for space (tweak if needed) */
+  }
+.example{
+    color: var(--app-grey);
+}
+.synonyms-heading, .antonyms-heading{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    width: 100%;
+    justify-items: start;
+}
+.synonyms-heading > div, .antonyms-heading > div{
+    word-break: break-all;
+    text-align: left;
+}
+.synonyms-heading > div:nth-child(2), .antonyms-heading > div:nth-child(2){
+    padding: 0rem .1rem;
+}
+.synonyms-heading{
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.synonymItem, .antonymItem{
+    color: var(--app-purple) ;
+    font-weight: 700;
+    padding: 0rem 1rem 0rem 0rem;
+    text-decoration: none;
+}
+.synonymItem:hover, .antonymItem:hover{
+    text-decoration: underline;
+}
+.sourceUrl{
+    align-self: flex-start;
+    font-size: var(--app-p-sm);
+    line-height: var(--app-p-sm-line);
+}
+.sourceUrl > span{
+    color: var(--app-grey);
+    padding-right: 1.25rem;
+}
+.sourceUrl > a{
+    padding-right: .5rem;
+}
+.sourceUrl > a.white{
+    color: var(--app-very-dark-grey);
+}
+.sourceUrl > a.black{
+    color: var(--app-white);
+}
+.sourceUrl > a:hover{
+    color: var(--app-grey);
+}
+.sourceUrl > a > svg{
+    padding-left: .5rem;
+}
+
+hr#bottom-source{
+    margin-bottom: 1.2rem;
+    width: 100%;
+    height: 1px;
+    border: none;
+}
+hr.black{
+    background-color: var(--app-dark-grey); 
+}
+hr.white{
+    background-color: var(--app-light-grey);
+}
+
+@media all and (max-width: 460px){
+    .synonyms-heading, .antonyms-heading{
+        grid-template-columns: 1.5fr 5.5fr;
+    }
+    #meaning-wrapper{
+        margin-top: 1.75rem;
+    }
+    .part-of-speech > span{
+        font-size: 18px;
+        line-height: normal;
+    }
+    .meaning-heading, .synonyms-heading, .antonyms-heading{
+        font-size: 1rem;
+        line-height: normal;
+    }
+    .meaning-desc{
+        padding: 2rem 0rem;
+    }
+    .meaning-desc > ul{
+        padding: 1rem 0rem 0rem 1.5rem;
+    }
+    .meaning-desc > ul > li{
+        font-size: 15px;
+        line-height: normal;
+    }
+    .synonyms-heading{
+        padding-top: 1.5rem;
+    }
+    .part-of-speech > hr{
+        margin-left: 1.5rem;
+    }
+  }
