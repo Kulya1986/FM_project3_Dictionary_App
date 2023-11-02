@@ -39,7 +39,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/Kulya1986/fm_project3_dictionary_app](https://github.com/Kulya1986/fm_project3_dictionary_app)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://splendid-genie-3fbc5f.netlify.app/](https://splendid-genie-3fbc5f.netlify.app/)
 
 ## My process
 
