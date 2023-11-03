@@ -116,34 +116,36 @@ class App extends Component{
                 colorThemeChange={this.colorThemeChange}
                 fontChange={this.fontChange}
                 />
-            <Search 
-                searchWord={this.state.searchWord}
-                theme={this.state.theme}
-                onSearchWordChange={this.onSearchWordChange} 
-                onSearchSubmit={this.onSearchSubmit} 
-                requestResultsForSearchWord={this.requestResultsForSearchWord}
-            />
-            {
-              this.state.searchDone
-              &&
-              <div>
-                {
-                    this.state.serverRes.length>0
-                    ?
-                    <div className='results'>
-                      <WordSection 
-                          serverRes={this.state.serverRes} 
-                          audioPlay={this.audioPlay}/>
-                      <Meaning 
-                          serverRes={this.state.serverRes}
-                          theme={this.state.theme}  
-                          onSynAntClick={this.onSynAntClick}/>
-                    </div>
-                    :
-                    <NoResults serverRes={this.state.serverRes}/>
-                }  
-              </div>
-            }
+            <main>
+              <Search 
+                  searchWord={this.state.searchWord}
+                  theme={this.state.theme}
+                  onSearchWordChange={this.onSearchWordChange} 
+                  onSearchSubmit={this.onSearchSubmit} 
+                  requestResultsForSearchWord={this.requestResultsForSearchWord}
+              />
+              {
+                this.state.searchDone
+                &&
+                <div>
+                  {
+                      this.state.serverRes.length>0
+                      ?
+                      <div className='results'>
+                        <WordSection 
+                            serverRes={this.state.serverRes} 
+                            audioPlay={this.audioPlay}/>
+                        <Meaning 
+                            serverRes={this.state.serverRes}
+                            theme={this.state.theme}  
+                            onSynAntClick={this.onSynAntClick}/>
+                      </div>
+                      :
+                      <NoResults serverRes={this.state.serverRes}/>
+                  }  
+                </div>
+              }
+            </main>  
           </div>
     );
   }

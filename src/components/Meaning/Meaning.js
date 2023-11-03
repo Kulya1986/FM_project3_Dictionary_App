@@ -3,7 +3,7 @@ import './Meaning.css';
 
 const Meaning = ({serverRes, theme, onSynAntClick}) =>{
     return(
-        <div id="meaning-wrapper">
+        <section id="meaning-wrapper">
                 {serverRes[0].meanings.map((part,i)=>{
                     return(
                         <div className="meaning" key={i}>
@@ -80,7 +80,7 @@ const Meaning = ({serverRes, theme, onSynAntClick}) =>{
                         );
                     })
                 }    
-        </div>
+        </section>
     )
 }
 
