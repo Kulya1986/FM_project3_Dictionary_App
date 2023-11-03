@@ -54,7 +54,7 @@ h1{
 }
 
   .checkbox-wrapper label {
-    --size: 50px;
+    --size: 40px;
     margin-left: 1rem;
     margin-right: 1.5rem;
     cursor: pointer;
@@ -68,10 +68,10 @@ h1{
   .checkbox-wrapper label:after {
     content: '';
     position: absolute;
-    top: 6%;
-    left: 2.5%;
-    width: calc(50% - 5%);
-    height: calc(100% - 11%);
+    top: 15%;
+    left: 5%;
+    width: calc(40% - 5%);
+    height: calc(80% - 11%);
     background: #fff;
     border-radius: 90px;
     transition: 0.3s;
@@ -82,7 +82,7 @@ h1{
   }
 
   .checkbox-wrapper input:checked + label:after {
-    left: calc(100% - 2.5%);
+    left: calc(100% - 8%);
     transform: translateX(-100%);
   }
 
