@@ -101,7 +101,7 @@ const Navigation = ({theme, colorThemeChange, fontChange}) => {
                 </div>
 
                 <div className="checkbox-wrapper">
-                    <input type="checkbox" id="theme-color" name="theme-color" onClick={colorThemeChange}></input>
+                    <input type="checkbox" id="theme-color" name="theme-color" onClick={colorThemeChange} aria-label="Color theme"></input>
                     <label htmlFor="theme-color">
                     </label>
                 </div>
