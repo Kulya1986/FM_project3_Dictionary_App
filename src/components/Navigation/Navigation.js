@@ -87,6 +87,7 @@ const Navigation = ({theme, colorThemeChange, fontChange}) => {
 
     return(
         <nav>
+            <h1>Online Dictionary</h1>
             <div id="logo">
                 <img src="../images/logo.svg" alt="logo Dictionary"></img>
             </div>
